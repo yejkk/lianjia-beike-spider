@@ -7,8 +7,8 @@
 # 日期,所属区县,板块名,小区名,挂牌均价,挂牌数
 # 20180221,浦东,川沙,恒纬家苑,32176元/m2,3套在售二手房
 
-from lib.spider.xiaoqu_spider import *
+from lib.spider.hlg import *
 
 if __name__ == "__main__":
-    spider = XiaoQuBaseSpider(SPIDER_NAME)
+    spider = HLGBaseSpider(SPIDER_NAME)
     spider.start()
