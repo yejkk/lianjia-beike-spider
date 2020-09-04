@@ -15,7 +15,7 @@ from lib.utility.path import *
 from lib.zone.area import *
 from lib.utility.log import *
 import lib.utility.version
-import lib.utility.torhttp
+from lib.utility.torhttp import *
 
 
 class XiaoQuBaseSpider(BaseSpider):
