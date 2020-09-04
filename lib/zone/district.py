@@ -33,7 +33,7 @@ def get_districts(city):
     """
     url = 'https://{0}.{1}.com/xiaoqu/'.format(city, SPIDER_NAME)
     headers = create_headers()
-    response = requests.get(url, timeout=10, headers=headers)
+    response = get_request().get(url, timeout=10, headers=headers)
     html = response.content
     root = etree.HTML(html)
     elements = root.xpath(CITY_DISTRICT_XPATH)
