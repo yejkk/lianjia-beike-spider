@@ -56,7 +56,7 @@ class XiaoQuBaseSpider(BaseSpider):
         logger.info(page)
 
         headers = create_headers()
-        response = get_request().get(page, timeout=10, headers=headers)
+        response = get_request().get(page, timeout=100, headers=headers)
         html = response.content
         soup = BeautifulSoup(html, "lxml")
 
@@ -75,7 +75,7 @@ class XiaoQuBaseSpider(BaseSpider):
             page = 'http://{0}.{1}.com/xiaoqu/{2}/pg{3}'.format(city, SPIDER_NAME, area, i)
             print(page)  # 打印版块页面地址
             BaseSpider.random_delay()
-            response = get_request().get(page, timeout=10, headers=headers)
+            response = get_request().get(page, timeout=100, headers=headers)
             html = response.content
             soup = BeautifulSoup(html, "lxml")
 
